@@ -1,276 +1,374 @@
-!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Geração dos Moonwalk</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellyssa Souza - MJ </title>
+    <!-- Booststrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- colocar icone junto com o nome  -->
+    <link rel="shortcup icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-    <header class=" p-5">
 
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/logo.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+    <header><!-- cabeçalho -->
+        <nav class="menu-desktop"> <!-- Menu desktop -->
+            <ul class="menu menu-principal">
+                <li class="menu-item">
+                    <a href="#home" class="menu-link">
+                        <span class="menu-text">
+                            home
+                        </span>
+                    </a>
+                </li>
+
+                <li class=" menu-item">
+                    <a href="#projetos" class="menu-link">
+                        <span class="menu-text">
+                            projetos
+                        </span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#sobre" class=" menu-link">
+                        <span class="menu-text">
+                            sobre
+                        </span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#contatos" class=" menu-link">
+                        <span class="menu-text">
+                            contatos
+                        </span>
+                    </a>
+                </li>
             </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
-                </div>
-            </div>
         </nav>
+
+        <!-- logo -->
+        <div class="header-logo">
+            <a href="">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
+        </div>
+
+        <!-- trocar cor do tema // -->
+        <div class="header-toggle">
+            <!-- Icone sol -->
+            <i class="bi bi-sun" id="toggleTheme"></i>
+
+            <button id="menuHamburger" class="btn-menu-mobile">
+
+                <!-- botao mobile  -->
+                <i class="bi bi-list-stars"></i>
+
+
+            </button>
+
+
+
+
+
+        </div>
 
     </header>
 
+    <!-- Estrutura Menu mobile -->
+    <nav class="menu-mobile" id="menuMobile">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="#home" class="menu-link">
+                    <span class="menu-text">
+                        home
+                    </span>
+                </a>
+            </li>
 
-    <main class="container my-5">
+            <li class="menu-item">
+                <a href="#projetos" class="menu-link">
+                    <span class="menu-text">
+                        projetos
+                    </span>
+                </a>
 
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/logo-2.png" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em um microfone" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
+            </li>
 
-              </div>
+            <li class="menu-item">
+                <a href="#sobre" class=" menu-link">
+                    <span class=" menu-text">
+                        sobre
+                    </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#contatos" class=" menu-item">
+                    <span class=" menu-text">
+                        contatos
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main id="home">
+
+        <!-- seção principal -->
+        <section class="main-content">
+            <!-- Titulo principal -->
+            <h1> Este site foi criado para espalhar empatia e amor às pessoas com deficiência, 
+                mostrando que cada vida tem um propósito especial. Aqui, falamos sobre acolhimento,
+                 respeito e inclusão, 
+                lembrando que Jesus nos ensina a amar o próximo como a nós mesmos. 💛
+                </h1>
+
+            <p> Mellyssa Souza, São Paulo - SP
+                meu objetivo é inspirar, apoiar e facilitar ações solidárias,
+                  aproximando quem precisa de ajuda de quem deseja oferecer apoio..</p>
+
+            <ul class="menu redes-sociais">
+                <li>
+                    <a href="https://www.instagram.com/m3lls2/" class="menu-link" target="_blank">
+                        <i class="bi bi-instagram instagram"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/5511947829158" class="menu-link" target="_blank">
+                        <i class="bi bi-whatsapp whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+
         </section>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre a tropicália">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center fundo-galeria">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/CFY8ckeuimE" title="Jesus ainda te chama de filho?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+    </main>
+
+    <section class="descricao-video">
+        <h2>💙 O amor de Jesus é suficiente para nossas vidas! ✨ Para ajudar o próximo, 
+            primeiro precisamos voltar para casa, 
+            cuidar de nós mesmos, e nos amar. 💛</h2>
+    </section>
+
+    <!-- projetos -->
+    <section class="livros" id="livros">
+        <h2> Seja bem vindo! </h2>
+
+        <div class="projetos-container">
+
+            <!-- projeto 1 -->
+            <div class="projeto-card">
+                <img src="img/projetos/img 2.png" alt="A imagem mostra uma mulher sorridente sentada 
+                à mesa com duas crianças pequenas em uma sala acolhedora e bem decorada, provavelmente
+                 voltada para atividades terapêuticas ou educacionais. A mulher interage com as crianças
+                  de forma atenciosa, enquanto uma delas brinca com um brinquedo sensorial colorido
+                   (pop it) e a outra segura um brinquedo de pelúcia. O ambiente é alegre e organizado,
+                    com brinquedos educativos, ursos de pelúcia e plantas, transmitindo uma sensação de 
+                    cuidado e conforto. Na porta ao fundo há uma placa que diz “Happy Hearts Therapy”,
+                 indicando que o local é uma clínica ou espaço terapêutico infantil.
+" class="img-card">
+
+                <div class="card-body">
+                    <h3 class="card-titulo">
+                        Sobre nós
+                    </h3>
+
+                    <p class="card-descricao">
+                      O site Ajudar (Ajudar ao Próximo) foi criado com o propósito de oferecer apoio e inclusão 
+                        para crianças com deficiência visual. Ele disponibiliza recursos educativos, 
+                        materiais acessíveis e atividades interativas que estimulam o aprendizado, 
+                        a autonomia e o desenvolvimento dessas crianças. O ambiente do AJUDAR é acolhedor 
+                        e pensado com carinho, buscando promover a empatia, a solidariedade e o amor ao próximo, 
+                        para que cada criança tenha aoportunidade de aprender e se desenvolver de forma plena e feliz.
+                    </p>
+
+                    <ul class="card-lista">
+                        <li class="card-item">
+                            <i class="bi bi-bookmark-heart-fill"></i>
+                            ajude você também!
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-5">
-                    <h2>Quem foi Michael Jakson?</h2>
-                    <p class="p-2">    Michael Joseph Jackson 
-                         (Gary, 29 de agosto de 1958 – Los Angeles, 25 de junho de 2009) foi um cantor, compositor, dançarino e filantropo estadunidense. 
-                         Apelidado de "Rei do Pop", ele é considerado uma das figuras culturais mais significantes do século XX e um dos maiores artistas da história da música
-                         . Ao longo de uma carreira de quatro décadas, suas conquistas musicais ao redor do mundo e sua vida pessoal publicizada fizeram dele uma figura global na cultura popular.
-                          Por meio da música, dança e moda, ele proliferou a performance visual para cantores de música pop, e popularizou movimentos da dança de rua, incluindo o moonwalk
-                           (que ele nomeou), o robô e a inclinada anti-gravidade. Jackson possui uma extensa legião de fãs, que inclui imitadores de todo o mundo.
+
+            </div>
+            <!-- fim projeto 1 -->
+
+            <!-- projeto 2 -->
+            <div class="projeto-card reverse-card">
+                <img src="img/projetos/img 1.png" alt=" A imagem mostra uma mulher caminhando
+                 com uma menina e um cão-guia em um parque verde e ensolarado. 
+                 A menina segura uma bengala branca, indicando que ela tem deficiência visual,
+                  e sorri enquanto caminha com confiança ao lado do cão. A mulher a acompanha de perto, 
+                  transmitindo cuidado e apoio. O cenário é tranquilo e cheio de natureza, com árvores 
+                  e flores ao redor, simbolizando inclusão, amor e liberdade. A cena reflete o propósito
+                   do Ajudar (Ajudar ao Próximo), que busca promover
+                 a autonomia e a felicidade de crianças com deficiência visual.
+" class="img-card">
+
+                <div class="card-body">
+                    <h3 class="card-titulo">
+                        cães-guia
+                    </h3>
+
+                    <p class="card-descricao">
+                        Os cães-guia têm um papel fundamental na vida de crianças com deficiência visual, 
+                        oferecendo independência,
+                         segurança e carinho. Além de ajudar na locomoção evitando obstáculos, 
+                         indicando caminhos e guiando com cuidado, eles também trazem conforto emocional 
+                         e fortalecem a autoconfiança da criança.
+Com a presença do cão-guia, a criança se sente mais segura para explorar o mundo,
+ realizar atividades do dia a dia e conviver com outras pessoas. Esses cães são treinados 
+ com muito amor e paciência, criando um vínculo de afeto e confiança com a criança. 
+Esse laço faz com que ela se sinta amada, protegida e acompanhada, 
+o que contribui não apenas para o desenvolvimento da sua autonomia, 
+mas também para o bem-estar emocional e social.
 
 
                     </p>
+
+                    <ul class="card-lista">
+                        <li class="card-item">
+                            <i class="bi bi-bookmark-heart-fill"></i>
+                           Ajude você tambèm
+                        </li>
+                    </ul>
                 </div>
+
             </div>
-        </section>
+            <!-- fim projeto 2-->
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
+            <!-- projeto 3 -->
+            <div class="projeto-card">
+                <img src="img/projetos/img 3.png" alt=" A imagem mostra uma professora auxiliando uma aluna cega 
+                em uma atividade educativa dentro de uma sala de aula colorida e acolhedora. 
+                As duas estão sorrindo enquanto montam juntas um grande quebra-cabeça
+                 de madeira sobre uma mesa. Ao fundo, há outras crianças participando de atividades 
+                 e prateleiras com brinquedos e materiais pedagógicos. A cena transmite um ambiente
+                  de aprendizado, inclusão e carinho, destacando a importância do apoio 
+                  e da atenção individual para o desenvolvimento das crianças." class="img-card">
 
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src=" https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fstories.cnnbrasil.com.br%2Fwp-content%2Fuploads%2Fsites%2F9%2F2024%2F02%2Fmichael-jackson-210aa5866c7d4dd58de8e3af57fe919a.jpg&imgrefurl=https%3A%2F%2Fwww.cnnbrasil.com.br%2Fentretenimento%2Ffilhos-e-mae-de-michael-jackson-perdem-acesso-a-heranca-segundo-revista%2F&docid=MM7FpMTPTU996M&tbnid=_JVW6zzm3CFLuM&vet=12ahUKEwjGi5GMzp6PAxXkSLgEHdrWAcoQM3oECCcQAA..i&w=1451&h=2000&hcb=2&ved=2ahUKEwjGi5GMzp6PAxXkSLgEHdrWAcoQM3oECCcQAA"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fogimg.infoglobo.com.br%2Fin%2F23510816-60f-1c0%2FFT1086A%2F81410863_FILES-In-this-file-photo-taken-on-August-31-1993-US-pop-megastar-Michael-Jackson-performs-d.jpg&imgrefurl=https%3A%2F%2Foglobo.globo.com%2Fepoca%2Fmichael-jackson-influencia-musical-presente-no-pop-de-2019-23762306&docid=OkhhlaSrA5796M&tbnid=Ey536seLvfUfuM&vet=12ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIOBAA..i&w=1086&h=652&hcb=2&ved=2ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIOBAA"
-                            loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fstatic01.nyt.com%2Fimages%2F2024%2F11%2F13%2Farts%2F08grammy-thriller-top%2F08grammy-thriller-top-articleLarge.jpg%3Fquality%3D75%26auto%3Dwebp%26disable%3Dupscale&imgrefurl=https%3A%2F%2Fwww.nytimes.com%2F2024%2F11%2F08%2Farts%2Fmusic%2Fgrammys-beyonce-cowboy-carter-michael-jackson-thriller.html&docid=CLGu5i-L0eNZPM&tbnid=bGZIIwGjr5aLcM&vet=12ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIbBAA..i&w=600&h=900&hcb=2&ved=2ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIbBAA">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fmjbeats.com.br%2Fwp-content%2Fuploads%2F2024%2F08%2F1BAD-TOUR-em-Roma-MJ-Beats-1.jpg.webp&imgrefurl=https%3A%2F%2Fmjbeats.com.br%2F2024%2F08%2Fquando-silvio-santos-adquiriu-o-show-de-michael-jackson-para-o-sbt%2F&docid=8WSQMi8PRfwKpM&tbnid=UfmjAVNwMZqREM&vet=12ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIORAA..i&w=1280&h=610&hcb=2&ved=2ahUKEwjc4820zp6PAxUfGLkGHSsiF8M4ChAzegQIORAA"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
-        </section>
+                <div class="card-body">
+                    <h3 class="card-titulo">
+                        Tenha empatia
+                    </h3>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
+                    <p class="card-descricao">
+                        Professores com empatia têm um papel essencial na vida de crianças com deficiência,
+                         pois vão além do ensino tradicional eles acolhem,
+                          escutam e valorizam cada criança como única.
+                           Quando um professor age com empatia,
+                            ele cria um ambiente onde a criança se sente amada,
+                             compreendida e capaz, o que fortalece sua autoestima e alegria
+                              de aprender.
+Esses educadores adaptam atividades,
+ respeitam o tempo de cada aluno e celebram cada conquista,
+  por menor que seja. Com paciência e carinho, 
+  transformam desafios em oportunidades de crescimento. 
+  Assim, 
+  a escola deixa de ser apenas um espaço de aprendizado 
+  e passa a ser um lugar onde a criança se sente segura, confiante e feliz, 
+  sabendo que é vista com amor e respeito.
+
+                    </p>
+
+                    <ul class="card-lista">
+                        <li class="card-item">
+                            <i class="bi bi-bookmark-heart-fill"></i>
+                            Ajude você também
+                        </li>
+                    </ul>
                 </div>
+                <section>
             </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
 
-</body>
-<!DOCTYPE html>
-<html lang="pt-br">
+            <!-- fim projeto 3 -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Tropicália</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
+             <!--sobre mim  -->
 
-<body>
-    <header class=" p-5">
+            <section class="sobre" id="sobre">
+                <h2> Sobre mim </h2>
+                Sou uma aluna que criei o site AJUDAR (Ajudar ao Próximo) com muito amor e dedicação. 
+                Fiz esse projeto com o objetivo de apoiar crianças e pessoas com deficiências, 
+                oferecendo um espaço de acolhimento, respeito e esperança. 
+                Acredito que ainda existem pessoas que se preocupam de verdade com o próximo
+                 e que pequenos gestos de empatia podem transformar vidas.
+Criei este site para mostrar que todas as pessoas merecem ser vistas, valorizadas e amadas,
+ independentemente de suas limitações.
+  Quero inspirar outros a fazerem o bem
+   e a lembrarem que ajudar o outro é espalhar amor pelo mundo.
+            </section>
 
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/logo.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            <!-- contato -->
+
+            <section class="contato" id="contato">
+                <h2> Contato </h2>
+
+     ✨💌 Entre em contato comigo.🥰🌸
+
+                <ul class="menu redes-sociais">
+                <li>
+                    <a href="https://www.instagram.com/m3lls2/" class="menu-link" target="_blank">
+                        <i class="bi bi-instagram instagram"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/5511947829158" class="menu-link" target="_blank">
+                        <i class="bi bi-whatsapp whatsapp"></i>
+                    </a>
+                </li>
             </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold"> <i class="bi bi-shadows"></i></button>         
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
+            </section>
+
+            <!-- Roda pé -->
+            <footer>
+                <p>
+                    &copy;2025.
+                </p>
+            </footer>
+
+
+
+
+
+
+
+
+
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
                 </div>
             </div>
-        </nav>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget("https://vlibras.gov.br/app/");
+            </script>
 
-    </header>
 
 
-    <main class="container my-5">
+            <script src="script.js"></script>
 
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/logo-2.png" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#Geraçao dos Jackson"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em um microfone" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
 
-              </div>
-        </section>
-
-        <section id="geração dos Jackson" class="my-5 pt-6 secao-jackson" tabindex="0" aria-label="Seção explicativa sobre a tropicália">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center fundo-galeria">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>O que foi a Geração Moonwalk
-                    </h2>
-                    <p class="p-2"> A expressão "Geração Moonwalk Michael Jackson" não se refere a uma geração específica,
-                     mas sim ao impacto duradouro e global do passo de dança "Moonwalk", popularizado por Michael Jackson em 1983 no especial Motown 25. </p>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fradiomundopop.com.br%2Ffilme-sobre-michael-jackson-e-adiado-e-pode-ser-lancado-em-2026%2F&psig=AOvVaw0Q0ilikp9bapY4JHjZlopJ&ust=1756462755418000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPCH4OqjrY8DFQAAAAAdAAAAABAE"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src=""
-                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Foglobo.globo.com%2Fepoca%2Fmichael-jackson-influencia-musical-presente-no-pop-de-2019-23762306&psig=AOvVaw0Q0ilikp9bapY4JHjZlopJ&ust=1756462755418000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPCH4OqjrY8DFQAAAAAdAAAAABAL"
-                            loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2022%2F07%2FAP20318287198575.jpg%3Fw%3D1000%26h%3D562%26crop%3D1&imgrefurl=https%3A%2F%2Fvariety.com%2F2022%2Fmusic%2Fnews%2Fmichael-jackson-removed-streaming-services-1235310184%2F&docid=6kJCRt7rIc9WIM&tbnid=nTt1_JT5b94S4M&vet=12ahUKEwinzrncpK2PAxXwH7kGHSQoOwM4FBAzegQIFRAA..i&w=1000&h=562&hcb=2&ved=2ahUKEwinzrncpK2PAxXwH7kGHSQoOwM4FBAzegQIFRAA">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://www.google.com/imgres?q=michael%20jackson&imgurl=https%3A%2F%2Fi.pinimg.com%2F474x%2Faa%2Fce%2F1d%2Faace1db71dcc5f9ff94964af8811c223.jpg&imgrefurl=https%3A%2F%2Fpt.pinterest.com%2Fpin%2F909234612268907637%2F&docid=QZi7iUZsSGX1GM&tbnid=YNQxTCEowKqxGM&vet=12ahUKEwjE9aOvpK2PAxX-JrkGHZ4IHsQ4ChAzegQIOhAA..i&w=397&h=600&hcb=2&ved=2ahUKEwjE9aOvpK2PAxX-JrkGHZ4IHsQ4ChAzegQIOhAA"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
-        </section>
-
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
 
 </body>
+
+</html>
+
+
