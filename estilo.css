@@ -1,0 +1,474 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Tangerine:wght@400;700&display=swap');
+
+
+/* css externo */
+
+/* Definir as cores tema dark */
+/* Raiz */
+:root,
+:root[data-theme='dark'] {
+    --cor-fundo: #a877dc;
+    --cor-text0: #fdfcfc;
+    --menu-link: rgb(12, 12, 12);
+    --cor-borda: rgb(76, 12, 76);
+    --cor-cabeçalho: rgb(240, 139, 240);
+    --cor-hover-icone: #f7b3ed;
+
+
+}
+
+:root[data-theme='light'] {
+
+    --cor-fundo: #8fc8f6;
+    --cor-texto: #f759f7;
+    --menu-link: rgb(18, 18, 18);
+    --cor-borda: rgb(244, 236, 244);
+    --cor-cabeçalho: rgb(240, 139, 240);
+    --cor-hover-icone: #e005f8;
+}
+
+/* Reset css = Padronizar */
+/* Seletor Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Inverter Cor Logo = Filtro */
+html[data-theme='light'] .logo {
+    filter: invert(1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    /* hexadecimal */
+    background: var(--cor-fundo);
+    /* cor do fundo */
+    color: var(--cor-text0);
+    /* cor de texto */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--menu-link);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    /* estilo de lista */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--cor-fundo);
+    border-bottom: 5px solid var(--cor-borda);
+    position: fixed;
+    z-index: 9999;
+    /* camadas */
+
+}
+
+.menu-desktop {
+    display: none;
+    /* Esconde o menu desktop */
+}
+
+/* NAV = UL // OL */
+.menu {
+    display: flex;
+    /* em linha // horizontal */
+    gap: 1rem;
+    /* 16px */
+    align-items: center;
+}
+
+/* LI = listas */
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu-text {
+    color: var(--menu-link);
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+/* Menu Hamburguer 
+botao menu mobile*/
+#menuHamburger {
+    margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.menu-mobile {
+    /* NAV */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--cor-fundo);
+    width: 75%;
+    height: 100vh;
+    /* viewPort Altura */
+    border-left: 1px solid var(--cor-borda);
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    transition: .3s ease-in-out;
+    transform: translateX(100%);
+}
+
+/* ativar o Menu Mobile */
+.menu-mobile.active {
+    transform: translateX(0%);
+}
+
+.menu-mobile
+
+/* nav */
+.menu-list {
+    /* Ul */
+    display: flex;
+    flex-direction: column;
+    /* EIXO Y = Vertical */
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1rem 2rem;
+}
+
+.menu-mobile .menu-item {
+    width: 100%;
+    text-align: center;
+}
+
+.menu-mobile .menu-link {
+    padding: 0.5rem 0;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.logo {
+    width: 3.25rem;
+    /* Cumprimento */
+    height: 3.90rem;
+    /* altura */
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#home {
+    padding: 4.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.55rem;
+    font-family: "Bodoni Moda", serif;
+    font-weight: bold;
+    font-style: italic;
+    /* font-size: normal */
+}
+
+
+
+.video iframe {
+    aspect-ratio: 16/9;
+}
+
+#home,
+.livros,
+.sobre,
+.contatos {
+    padding: 2.5rem 1rem;
+}
+
+.descricao-video {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0c;
+    padding: 6.25rem 1rem 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+    margin-top: -5.5rem;
+}
+
+.descricao-video h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: justify;
+    margin-top: -2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.img-card {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-titulo {
+    color: #f9f7f9;
+    /* Cor do texto */
+    font-weight: 1 rem;
+    /* Tamanho do texto */
+    font-size: 2rem;
+    /* largura das letras */
+    font-family: Georgia, 'Times New Roman', Times, serif
+        /* estilo das fontes  */
+}
+
+.card-descricao {
+    color: rgb(13, 13, 13);
+    /* Cor do texto */
+    font-weight: 3rem;
+    /* Tamanho do texto */
+    font-size: 1rem;
+    /* largura das letras */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        /* estilo das fontes  */
+}
+
+.card-lista {
+    color: rgb(245, 241, 246);
+    /* Cor do texto */
+    font-weight: 3rem;
+    /* Tamanho do texto */
+    font-size: 1rem;
+    /* largura das letras */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        /* estilo das fontes  */
+}
+
+.card-item {
+    color: rgb(249, 247, 249);
+    /* Cor do texto */
+    font-weight: 3rem;
+    /* Tamanho do texto */
+    font-size: 1rem;
+    /* largura das letras */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        /* estilo das fontes  */
+
+}
+
+.card-item i:hover {
+    color: var(--cor-hover-icone);
+    transition: 0.3s ease-in-out;
+}
+
+.redes-sociais{
+    font-size: 1.2rem
+}
+
+.redes-sociais i:hover {
+    color: var(--cor-hover-icone);
+    transition: 0.3s ease-in-out;
+
+}
+    
+.redes-sociais .instagram{
+    color:#fb04b1;
+    
+}
+
+.redes-sociais .instagram:hover{
+    color:rgb(23, 23, 23);
+}
+
+.redes-sociais .whatsapp{
+    color: rgb(58, 87, 29);
+    
+}
+
+redes-sociais .whatsapp:hover{
+    color: rgb(158, 245, 8)
+}
+/* Medidas Responsivas */
+/* telas até 768 */
+@media(max-width:768px) {
+    #home {
+        padding-top: 5rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .menu-desktop {
+        display: flex;
+        min-width: 30%;
+        /* alinhar o logo */
+    }
+
+    .btn-menu-mobile {
+        display: none;
+    }
+
+    .header-toggle {
+        min-width: 30%;
+    }
+
+    header {
+        padding: 1rem 6rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+
+    #home,
+    .livros,
+    .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* FIM mim 768px */
+}
+
+@media (min-width:992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .img-card {
+        width: 55%;
+        /* tamanho das fotos */
+        height: 5%;
+    }
+
+    .reverse-card {
+        /* espelhar */
+        flex-direction: row-reverse;
+
+    }
+
+}
+
+@media(min-width:1200px) {
+    h2 {
+        font-size: 4rem;
+        color: #fdfcfc;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    h3 {
+        font-size: 3.25;
+    }
+
+    .descricao-video,
+    .livros,
+    .sobre {
+        padding: 10rem 15rem 4rem;
+    }
+
+
+}
